@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ჩემი პროფილი - HairCare Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 👑 პრემიუმ ნავბარი */
+        .navbar-custom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background-color: #1a1a1a;
+            border-bottom: 1px solid #333;
+        }
+        .navbar-custom ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+        .navbar-custom a {
+            text-decoration: none;
+            color: gold;
+            font-weight: 500;
+        }
+
+        /* 👤 პროფილის მთავარი კონტეინერი */
+        .profile-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #141414;
+            padding: 35px;
+            border-radius: 12px;
+            color: white;
+            border: 1px solid #c5a059;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .profile-container h2 {
+            border-bottom: 2px solid #c5a059;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .user-info p { font-size: 1.1em; margin: 12px 0; color: #ccc; }
+        .user-info span { color: #c5a059; font-weight: bold; }
+
+        .logout-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .logout-btn:hover { background-color: #bd2130; }
+
+        /* 🛍️ პროდუქტების ფანჯარა */
+        .products-window {
+            background: #0b0b0b;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #222;
+            margin-top: 30px;
+        }
+        .products-window h3 {
+            font-size: 18px;
+            color: #c5a059;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .product-status-item {
+            background: #141414;
+            padding: 14px;
+            margin: 10px 0;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            border-left: 4px solid #333;
+            transition: 0.3s;
+        }
+        .product-status-item.owned {
+            border-left: 4px solid #4ade80;
+            background: #141e17;
+        }
+    </style>
+</head>
+<body>
+
+   <nav class="navbar-custom">
+    <a href="https://www.tbcbank.ge/web/ka/web/guest/education" target="_blank">
+        <img src="data:image/png;base64,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" style="height: 35px; width: auto;">
+    </a>
+
+     <ul>
+        <li><a href="index.html">მთავარი</a></li>
+        <li><a href="shop.html">მაღაზია</a></li>
+        <li><a href="registracia.html">ავტორიზაცია</a></li>
+        <li><a href="arceva.html">არჩევა</a></li>
+        <li><a href="propaili.html" class="active">ჩემი პროფილი</a></li>
+    </ul>
+</nav>
+
+    <main>
+        <div class="profile-container">
+            <h2>👤 ჩემი პროფილი</h2>
+            <div class="user-info">
+                <p><strong>მომხმარებელი:</strong> <span id="profileUsername">სტუმარი</span></p>
+                <p><strong>ელ-ფოსტა:</strong> <span id="profileEmail">guest@example.com</span></p>
+                <button class="logout-btn" onclick="logoutUser()">სისტემიდან გამოსვლა 🚪</button>
+            </div>
+
+            <div class="products-window">
+                <h3>🛍️ თმის მოვლის პროდუქტების სტატუსი</h3>
+                <div id="productsList">
+                    <div class="product-status-item" id="p-clay"><span>Based hair clay</span><span id="s-clay">❌ არ გაქვთ</span></div>
+                    <div class="product-status-item" id="p-salt"><span>Based sea salt spray</span><span id="s-salt">❌ არ გაქვთ</span></div>
+                    <div class="product-status-item" id="p-powder"><span>Based texture powder</span><span id="s-powder">❌ არ გაქვთ</span></div>
+                    <div class="product-status-item" id="p-oil"><span>Beard oil</span><span id="s-oil">❌ არ გაქვთ</span></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        if (!localStorage.getItem("isRegistered")) {
+            alert("თქვენ არ ხართ ავტორიზებული! გთხოვთ გაიაროთ რეგისტრაცია.");
+            window.location.href = "registracia.html";
+        }
+
+        let userEmail = localStorage.getItem("userEmail") || "user@example.com";
+        document.getElementById("profileUsername").innerText = userEmail.split('@')[0];
+        document.getElementById("profileEmail").innerText = userEmail;
+
+        let myProducts = JSON.parse(localStorage.getItem("myProducts")) || [];
+
+        function showAsOwned(prodId) {
+            let row = document.getElementById("p-" + prodId);
+            let status = document.getElementById("s-" + prodId);
+            if(row && status) {
+                row.classList.add("owned");
+                status.innerText = "✅ შეძენილია";
+                status.style.color = "#4ade80";
+                status.style.fontWeight = "bold";
+            }
+        }
+
+        myProducts.forEach(product => {
+            if(product === "hair clay") showAsOwned("clay");
+            if(product === "sea salt spray") showAsOwned("salt");
+            if(product === "texture powder") showAsOwned("powder");
+            if(product === "beard oil") showAsOwned("oil");
+        });
+
+        function logoutUser() {
+            if(confirm("ნამდვილად გსურთ სისტემიდან გამოსვლა?")) {
+                localStorage.clear();
+                alert("თქვენ გამოხვედით სისტემიდან!");
+                window.location.href = "index.html";
+            }
+        }
+</body>
+</html>

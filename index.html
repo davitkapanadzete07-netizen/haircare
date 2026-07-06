@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Based Hair Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #000000; color: #ffffff; font-family: 'Segoe UI', sans-serif; }
+        .hero-section { padding: 80px 20px; text-align: center; border-bottom: 1px solid #333; }
+        .hero-title { color: #c5a059; font-weight: bold; text-transform: uppercase; }
+
+        /* შენი ორიგინალი პროდუქტის ბარათის სტილი */
+        .product-card {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            padding: 25px;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 450px;
+            height: 100%; /* ათანაბრებს ბარათების სიმაღლეს */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card img {
+            max-height: 250px;
+            object-fit: contain;
+        }
+
+        .btn-gold {
+            background-color: #c5a059; color: #000; border: none; padding: 12px;
+            width: 100%; font-weight: bold; text-decoration: none; display: inline-block;
+        }
+        .btn-gold:hover { background-color: #a6854a; color: #fff; }
+    </style>
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">HairCare Hub</h1>
+            <p>მოგესალმებით თმის მოვლის პრემიუმ სივრცეში. აქ შეგეძლებათ ძალიან ბევრი პროდუქციის ყიდვა წამყვანი ბრენდებისგან.</p>
+        </div>
+    </header>
+
+ <nav class="navbar-custom" style="display: flex; align-items: center; justify-content: space-between; padding: 15px 30px; background-color: #1a1a1a; border-bottom: 1px solid #333;">
+    <a href="https://www.tbcbank.ge/web/ka/web/guest/education" target="_blank" style="display: flex; align-items: center;">
+        <img src="data:image/png;base64,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" alt="TBC Education" style="height: 35px; width: auto;">
+    </a>
+
+     <ul style="display: flex; list-style: none; gap: 20px; padding: 0; margin: 0; align-items: center;">
+        <li><a href="index.html" style="text-decoration: none; color: gold; font-weight: bold; ">მთავარი</a></li>
+         <li><a href="shop.html" style="text-decoration: none; color: gold;">მაღაზია</a></li>
+         <li><a href="registracia.html" style="text-decoration: none; color: gold;">ავტორიზაცია</a></li>
+         <li><a href="arceva.html" style="text-decoration: none; color: gold; ">არჩევა</a></li>
+        <li><a href="propaili.html" style="text-decoration: none; color: gold; ">ჩემი პროფილი</a></li>
+    </ul>
+</nav>
+
+    <main class="container mt-5">
+        <h2 class="text-center mb-5 hero-title">ჩვენი რჩეულები</h2>
+
+        <div class="row g-4 justify-content-center">
+
+
+       <div class="row g-4 justify-content-center">
+
+        <div class="col-12 col-md-3">
+            <div class="product-card">
+                <img src="https://cdn.instant.so/sites/9m9NOCxHNwUK7yNf/assets/MvPjPNmujR6eP9RG/collection-pomade.png?width=1280">
+                <h4 class="hero-title">BASED HAIR CLAY</h4>
+                <p class="text-secondary small">მატოვი ეფექტი და ძლიერი ფიქსაცია.</p>
+                <p class="fs-5 fw-bold" style="color: #c5a059;">$24.00</p>
+                <a href="profile.html?name=Based Hair Clay&price=24.00" class="btn btn-gold">ყიდვა</a>
+            </div>
+        </div>
+
+          <div class="col-12 col-md-3">
+            <div class="product-card">
+                <img src="https://cdn.instant.so/sites/9m9NOCxHNwUK7yNf/assets/g47YcJmiVnWD7iG4/kajasea-salt-spray-product-card-cover.png?width=1280">
+                <h4 class="hero-title">SEA SALT SPRAY</h4>
+                <p class="text-secondary small">ბუნებრივი მოცულობა და ტექსტურა.</p>
+                <p class="fs-5 fw-bold" style="color: #c5a059;">$20.00</p>
+                <a href="profile.html?name=SEA SALT SPRAY &price=20.00" class="btn btn-gold">ყიდვა</a>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+            <div class="product-card">
+                <img src="https://cdn.instant.so/sites/9m9NOCxHNwUK7yNf/assets/k8BOF8siTmcottar/collection-texturepowder.png?width=1280">
+                <h4 class="hero-title">TEXTURE POWDER</h4>
+                <p class="text-secondary small">მყისიერი მოცულობა და დაფიქსირება.</p>
+                <p class="fs-5 fw-bold" style="color: #c5a059;">$22.00</p>
+               <a href="profile.html?name=TEXTURE POWDER&price=22.00" class="btn btn-gold">ყიდვა</a>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+            <div class="product-card">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8OEhUSEBIQEBMTEBAQEhUVEBUXGBAQFxUXFxYZFRUZHiggGBolGxgVITEhJSkrLi8uFx8zODMsNygtLysBCgoKDg0OGhAQFzcmHR4tLS03LTg3LS0yNy0rNy0vNzUrKzMrNy0xLSs3LS0tLis1MTUrLi0rLzctKzc3LTc1K//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAAAQUGBwIDBAj/xABIEAACAQMCAwQFBQ0FCQEAAAAAAQIDBBESIQUGMQciQVETMmFxgTRCc7LBFCMkUnKRk6GxwtHS8FNkgoOzM1RiY3SEkqLhJf/EABsBAQADAQEBAQAAAAAAAAAAAAABAgMEBgUH/8QAKBEBAAICAAUEAAcAAAAAAAAAAAECAxEEBRIhMUFRcZEiobHB0eHw/9oADAMBAAIRAxEAPwDeIAABgMCAAAAAAAAAAAAAAAAAAAAAAAAAAARJCJAAAAAAAAABgMCAAAAAAAAAAANSc69r0retKhYU6dX0cnGdWpqcXNbNQjFrKT2y2bK5juXRtLipHaULetOL8moNo+U7J4k/H3gbd5R7ZnVqxo8QpU6am1FVqepRhJ9NcJN4j7U9vI3Aj45r7y+J9Wcl15VbC0nN5lK1oOT83oW4F0AAAAAAAAAACJIRIAAAAAAAAAMBgQAAAAAAAAAAKPnmWOH3b/utZfni0fMNnDLl8T6R7TrlUuGXLfzoRpr2uU4r+J878IjFqo20sRbXvCVXNbn05yPc6bC0X91or/1R8yVGnL4n0fyVJSsLXH+7018UsP8AYEMzhLJyPPaPY9AAAAAAAAABEkIkAAAAAAAAAGAwIAAAAAAAAKbnLi87Cyr3NOMZTpQTipZw25KO+PeXJinam/8A8u5/Jpf6sANM8f564hxKk6Vw6Xo3JS0wp6ctRm1vlvw8/Ax2nFx2jFLLw930yhQzh/14VDt0vK/KX1kSl5JWixnSumer/Fk/s/UZLwTtB4hZU40afoJ06eVFTptvDk2+8pJ+JQ1F3Xv81f6dQ8jW79/2sgfVvArn09ClVaSdWjSqtLonOCk0vzlgY/yRXUrG1/6S3/04mQBAAAAAAAAAiSESAAAAAAAAADAYEAAAAAAAAFFztwmpfWdS3paXKpo9aTisRkpdUnvsXoA+WuYuDVuHVvQVpUoTwnp9LT1aXnDfeeM5fUqqtw4478Xv4NPDTz5eaNh9rHDnSv8AVCTlKpipv0jnKx8NJr3iMHKTjNrPrLCfXHvMbXmLah24sNbY+qYcKtVpYco7peXTDS8PJs9fA+HVr6r6KhBVZ7ywq1KLx1bSlJZSz4ZF1SrxUdT+ZDGV1Tjt84zDsvs9dzBuWHBynhL1sLp1JpffqplxdO9R4bU5aoTt7ahSknCVOlCDTlFtaVjdx2fwMnt55RUYLS06GrlekAAAAAAABEkIkAAAAAAAAAGAwIAAAAAAAAInNRWW8JHXdXEKUXObxGKy2al5v5/qVG4UHogs7+YTEbU3afd1qt3KsoNQjiENUX3kl4Jb/jM1vd3npKi6KSWl7Y3+JkdW+p3LlK4evSu63Np5b3xvnwKKlY0ZzXdxvmSdR5x1eVjJz2tHVPbw+hSkxjrHV5nw41+LyliNRrMFGGdPRJYX6jK+QeIOhXhVT1xzvpxuntJe/HmYtdWNOE3ikpRbzHvyxpfTZew99pdqksQiopPol4l6a6YmIZZot1zEzL6OtKkaqU4NSi901/Wz9hb28cI0hyhzjOhJKXejnvL8Ze32rzN18MvKdxTjUpvMZLK9nsftNInbltXT1AAlUAAAAAESQiQAAAAAAAAAYDAgAAAAAAAGtu1fjcoabeDwtOqftb6L8xpa6uJVJYW+XhLzZsTtTqqV3UxJPGF1WzSSwa3tajpzjPCenLxqW+zX2md5n0h04or23Onfc2sqWiGrv1JJNJfN2zlnZe8MlClKrlpyjlYk86dR1Ru6zqaoxWpxlHU2no1dWvJ4yW/Eb6o7enDRF4cdUlp1KC2xjPVrLx7jiyRm6q9n1MN8HROp1Hf+P32p58MdLvNNZ2Ty/BuLx8UzplS8mR6epNyc295yay1sm2/tO6lKHjJL4nTE2rWHHaMd7zqY1twtq7g8+KZuLsm429cqDfdknKPsa3/YadqqOrMWmml4+JnPZ1cRjdU3qS3wt/FrBesywyRGtbb8B5bW41HqNXKAAAAACJIRIAAAAAAAAAMBgQAAAAAAADQPaP8AK6/0s/2mEVaE4qMnCajP1G4NKpvjuvHe38jN+0j5XX+lkU/DedLm1p06UKdBqkmoOUZt7z19VNLOfsCVZYWlZzcFTqOUUnKKhJyjFpNNrGUt4/nRZXtGrCkpSpzjFvClKEkm99k3tnZ/mfkd9HnK5dSM9FHMacKS7sn3ISUoptyy91nD2fwR7aHNdzb0oQiqMlB5WqEm21Kc9+9s81JZxjK2e2xaBh1alNaXpklPOh6XieHpel+O+2xxuuH16SzVpVqazhudOUd8yWN11zGf/i/Jl/xDm+vXoToThTWqMKacMxUYLOruPKzJOUdsJKUljpgue75Yy6M8QcO9S6pqGW2mm3mLl76k347RIxz0M46XKMoqUdcW0+9HLjleaymvgZVyT8ppfS0/rI8N/wA33dzSdGoqTjLUnLTLVh1PSYy5Po8JbbLY93JL/CKP01P6yITDe1vPDLinLKKWn1Leh0CrtAAAAAESQiQAAAAAAAAAYDAgAAAAAAAGge0j5XX+lkVNtyhOtbK5jWgtVC6uNEoTSULeSjNOp6qbysZ67lt2k/K6/wBJI8tpznSoW0KCpVakoWle20TnH0FSVaoqkqk4Yy3FrEV+tBZSW/ArzMPwet98TcO4+8klJ5/FxFpvONmmWdfl6+a0q2rt5hHCpvZy2j8H5lrW54t607jNK4jRu6FeFSEZUU6Varo1TptR7+dGHKeXjCwsYc8d5upVqFaFGnWoyrUrGkn6RPRC3ztqWG8t9ff0LQhRcP5Qua0K9Sqp20KFvWr5nS2qeibUorvJp5TWcNbPyOHDOUZVlbelrwt53zqfckJU5SVTThJ1JJ/e1JtJbPOS1vuc7apTq5oV41q3C6fDpNVIejh6N5ThFrOl5ecvKxjDzk8NpzdR9FZK4o1J1eGz1W8oVIxjVgmpRhVym44lGHejnKT23yVC75MnQtp1qk5xqUqSnOk6OFr+6XQlGNTV3ktnlLxOXJT/AAmj9NS+ujnxDnZXFrKhKlN1KtOoqlTWlH0s7r7pbjHD7uXJYz0xucOSl+E0fpqX10Ew3rHqW9v0KiPUt7foFXaAAAAAIkhEgAAAAAAAAAwGBAAAAAAAANBdpPyyv9JIwe1uPRVYTwpKM4ycWlicU94vPmsr4mb9pPyyv9IzAKj3CWacO4xSuJtRsYSbnLC7umPpIY0uTW2qrKTXT5kV0PTGliEVKxnXj6N4jGUcZWE3qjHWm8x1bvD6eKWE2laUH3ZSjnS9pNZaaks48mk15NF3Djd1TXcrVI+s+vjJ6pfFttsnQsnTpwi3LhVSemMpSymm4b9/C6Lp0+GzPLfXdvZ1oa7GK+80JQj6SOfWnLW5RXWScd/+Wl0bRS1OO3eNPpp4xGONvVjjC6bLZbHgvLypWadSTm1FRTaXqrotiByuK/pKs6iWlTq1Kij+KpSckvhnBlHJT/CaP01P60TEYGWclP8ACaP01L6yCYb4j1Le36FRHqW9v0CrtAAAAAESQiQAAAAAAAAAYDAgAAAAAAAGoOduVlc3NaauqNNubemcGsf4smHy7PriXq3Vk/fVkv3WbB5s+UVPy/sRRRPO8RzHPjyTWJ7Q9Lh5RhyY4tudzEMZnyDewa++2cs/i15P9w9j5BvpR9e0/Ty/kMloFlRpxazJTeXpgltqk8/Oax4Yx1KY+b8Radahnk5Tir6y1tDkG+qN4naLfHeryX7h2rs3vPnXHD4/9xL+Qzm8oJLVFTWHpnFrOh7fOSx4pYeHllbUFua8RE6mIa05Phv3i0sch2eVF617ZR905S+xGQcucoU6FWnN3tOo4zhJRhSlu1JNLVk6ZlrwL/aw/Lh9ZGuHmGe9oiZ/Rpl5LhpSbbntDYcepb2/QqYrctrfoegeVdoAAAAAiSESAAAAAAAAADAYEAAAAAAAA1jzd8oqflfYigiy+5waV1UTaTbTSb6pxW5QI8hxsazW37y91wUxOCuvaHsoMsaFdJYlJpJOUFjVHXv4eD32fmeLhs6Sf31ZW3nt59P62PbRrW7UdSaaUlL1t3jZ7fH9Rhipr8UWj7/3ypn866ZefiFddITcs7zxFxjKW2+Hvl4y/gVk2WyqWuZ6ovdS0Y1YW8se3poe/tPDxFUO76HW9nr1efhj2F8lJn8c2j421wW1qvTPyrpstuAv77T+kh9ZFTMseX6sXWprVFvXDbKz18jbhImbxprxcxGG259JbKj1LW36FTDqW1v0PWvz52gAAAACJIRIAAAAAAAAAMBgQAAAAAAADU/bRwzMqdbG0oaW/wDii/4NGl5ycG0pSXuk0fV3MHBaV/RdKr06xa6xl5mpeMdjdy23Rq0ZLwy5QePipFZjfletteGp6t1X201qy/zZr7SVd3n9tW/Ty/mMxuOy3ikHtClL3V4/akeeXZ3xX+xi/wDOp/xKTjrPp+TSMs+u/tjUbi7a3rVv08v5jhUr1161Sr8asn9pkq7NuK/2C/TU/wCJ20uy/ij6wpR99aP2ZEY49o+icvtv7/piWpy6yb97bNl9k9hqra8bRTfwX/1x/OdHDeyi7zmrOjD/ABOX7EbL5Y5ep8PpuMXrlLGXjCwvBIvEaZzba6h1Le36FTTW5bUOhZR2gAAAACJIRIAAAAAAAAAMBgQAAAAAAAAAAPDd2ud0V87dovmjhKkmBQ+jZKgy5duji7ZAVagzmoMsfuZHKNBAeOhRLGCwRGGDmAAAAAAESQiQAAAAAAAAAYAEAAAAAAAAAAAAAAAAAAAAAAAAAAAiQAAAAAAD/9k=" class="img-fluid mb-3">
+                <h4 class="hero-title">BEARD OIL</h4>
+                <p class="text-secondary small">დამატენიანებელი წვერის ზეთი.</p>
+                <p class="fs-5 fw-bold" style="color: #c5a059;">$18.00</p>
+               <a href="profile.html?name=BEARD OIL&price=18.00" class="btn btn-gold">ყიდვა</a>
+
+            </div>
+        </div>
+
+    </div>
+</main>
+
+    <footer class="container mt-5 py-5 border-top border-secondary">
+        <div class="row text-center">
+            <div class="col-md-6 mb-4">
+                <h4 style="color: #c5a059; text-transform: uppercase;">ჩვენი სამუშაო ადგილი</h4>
+                <p class="text-secondary">თბილისი, ტექნოპარკის ინოვაციების ცენტრი.</p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h4 style="color: #c5a059; text-transform: uppercase;">პროექტზე მუშაობდნენ</h4>
+                <p class="text-secondary">დავით კაპანაძე და TBC ტექ სკოლა</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+<link rel="stylesheet" href="style.css">

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>რეგისტრაცია - HairCare Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 👑 თხელი ნავბარი, ზუსტად შენი სურათების მიხედვით */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding: 0 30px;
+            background-color: #111111;
+            border-bottom: 2px solid #c5a059; /* ოქროსფერი ხაზი */
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-box img {
+            height: 35px;
+            background-color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #c5a059;
+            font-size: 15px;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #ffffff;
+        }
+
+        /* 🔒 რეგისტრაციის ლამაზი ფორმა ცენტრში */
+        .auth-container {
+            max-width: 400px;
+            margin: 80px auto;
+            background: #141414;
+            padding: 40px 35px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #c5a059;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .auth-container h2 {
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #ffffff;
+            font-size: 26px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            color: #c5a059;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 16px;
+            background-color: #1d1d1d;
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #c5a059;
+            background-color: #222;
+            outline: none;
+        }
+
+        /* 🚀 ოქროსფერი ღილაკი რეგისტრაციისთვის */
+        .btn-gold-submit {
+            background-color: #c5a059;
+            color: #000000;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-gold-submit:hover {
+            background-color: #e2ba6e;
+            transform: translateY(-1px);
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            color: #444;
+            font-size: 13px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+      <nav class="navbar-custom" style="display: flex; align-items: center; justify-content: space-between; padding: 15px 30px; background-color: #1a1a1a; border-bottom: 1px solid #333;">
+    <a href="https://www.tbcbank.ge/web/ka/web/guest/education" target="_blank" style="display: flex; align-items: center;">
+        <img src="data:image/png;base64,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" alt="TBC Education" style="height: 35px; width: auto;">
+    </a>
+
+     <ul style="display: flex; list-style: none; gap: 20px; padding: 0; margin: 0; align-items: center;">
+        <li><a href="index.html" style="text-decoration: none; color: gold; font-weight: bold; ">მთავარი</a></li>
+         <li><a href="shop.html" style="text-decoration: none; color: gold;">მაღაზია</a></li>
+         <li><a href="registracia.html" style="text-decoration: none; color: gold;">ავტორიზაცია</a></li>
+         <li><a href="arceva.html" style="text-decoration: none; color: gold; ">არჩევა</a></li>
+        <li><a href="propaili.html" style="text-decoration: none; color: gold; ">ჩემი პროფილი</a></li>
+    </ul>
+</nav>
+    <div class="auth-container">
+        <h2>რეგისტრაცია 🚀</h2>
+
+        <form id="regForm">
+            <div class="form-group">
+                <label for="email">ელ. ფოსტა:</label>
+                <input type="email" id="email" placeholder="შეიყვანეთ ელ.ფოსტა" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">პაროლი:</label>
+                <input type="password" id="password" placeholder="მოიფიქრეთ პაროლი" required>
+            </div>
+
+            <button type="submit" class="btn-gold-submit">რეგისტრაცია 🚀</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("regForm").addEventListener("submit", function(e) {
+            e.preventDefault(); // აჩერებს გვერდის გადატვირთვას
+
+            // 1. ვიღებთ იუზერის შეყვანილ ელ-ფოსტას
+            let userEmailValue = document.getElementById("email").value;
+
+            // 2. ბრაუზერში ვინახავთ სტატუსს და ემეილს
+            localStorage.setItem("isRegistered", "true");
+            localStorage.setItem("userEmail", userEmailValue);
+
+            // 3. ვქმნით ცარიელ მასივს პროდუქტებისთვის, რომ პროფილიდან ❌-ები სწორად გამოჩნდეს
+            localStorage.setItem("myProducts", JSON.stringify([]));
+
+            // 4. შეტყობინება
+            alert('მოგესალმებით HairCare Hub-ში! ✨');
+
+            // 5. ავტომატურად გადაგვიყვანოს მთავარ გვერდზე
+            window.location.href = "index.html";
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2026 HairCare Hub. ყველა უფლება დაცულია.</p>
+    </footer>
+</body>
+</html>
